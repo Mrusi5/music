@@ -1,0 +1,8 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+sqlalchemy==1.4.41
+python-dotenv==0.19.2
+typing_extensions==4.6.3
+python-multipart==0.0.6
+ffmpeg
+psycopg2-binary==2.9.5
