@@ -1,11 +1,8 @@
 <br>Веб-Сервис принимает на вход запросы с именем пользователя. Ему присваивается уникальный индефикатор (access_token).
-<br>Вы можете загружать аудио файли в формате wav и сервис конвертирует их в mp3 фаил. Так же вы можете скачивать за
-<br>Настройки быззы данных вы можете изменить на используемые в файле .env. 
+<br>Вы можете загружать аудио файли в формате wav и сервис конвертирует их в mp3 фаил. Так же вы можете скачивать за 
 <br>Как пользоваться сервисом:
 <br>
-<br>0) Создать базу данных postgresql через docker: docker run -p 5432:5432 --name nameapp -e POSTGRES_USER=username -e POSTGRES_PASSWORD=password -e POSTGRES_DB=namedb -d postgres:13.3
-<br>
-<br>1) В файле .env изменить переменные DB_USER, DB_PASS, DB_NAME, DB_PORT на используемые.
+<br>1) Создать базу данных postgresql через docker: docker run -p 5432:5432 --name music -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=music -d postgres:13.3
 <br>
 <br>2) Запустить docker-compose build. После создание контейнера запустить docker-compose up.
 <br>
