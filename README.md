@@ -3,15 +3,19 @@
 <br>Настройки быззы данных вы можете изменить на используемые в файле .env. 
 <br>Как пользоваться сервисом:
 <br>
-<br>1) Запустить docker-compose build. После создание контейнера запустить docker-compose up.
+<br>0) Создать базу данных postgresql через docker: docker run -p 5432:5432 --name nameapp -e POSTGRES_USER=username -e POSTGRES_PASSWORD=password -e POSTGRES_DB=namedb -d postgres:13.3
 <br>
-<br>2) Перейти на сайт http://127.0.0.1/docs. Здесь будет представлен весть функциолнал сервиса.
+<br>1) В файле .env изменить переменные DB_USER, DB_PASS, DB_NAME, DB_PORT на используемые.
 <br>
-<br>3) Вкладка "/users" создаёт пользователя и присваевает уникальный индефикатор. Нажмите try it out, введите вместро string имя пользователя. В ответе будет id пользователя и его access_token.
+<br>2) Запустить docker-compose build. После создание контейнера запустить docker-compose up.
 <br>
-<br>4) Вкладка "/users/{user_id}/recordings" позволяет загрузить wav фаил. Необходимо указать id пользователя, его access_token и выбрать фаил для загрузки. В ответе вы получите ссылку формата "http://localhost:8000/recordings/{recording_id}?user_id={user_id}&access_token={access_token})"
+<br>3) Перейти на сайт http://127.0.0.1/docs. Здесь будет представлен весть функциолнал сервиса.
 <br>
-<br>5) С помощью полученной ссылки вы можете скачать загруженный ранее аудио фаил во вкладке "/recordings/{recording_id}". Вам необходимо просто вставить ссылку в поле url.
+<br>4) Вкладка "/users" создаёт пользователя и присваевает уникальный индефикатор. Нажмите try it out, введите вместро string имя пользователя. В ответе будет id пользователя и его access_token.
+<br>
+<br>5) Вкладка "/users/{user_id}/recordings" позволяет загрузить wav фаил. Необходимо указать id пользователя, его access_token и выбрать фаил для загрузки. В ответе вы получите ссылку формата "http://localhost:8000/recordings/{recording_id}?user_id={user_id}&access_token={access_token})"
+<br>
+<br>6) С помощью полученной ссылки вы можете скачать загруженный ранее аудио фаил во вкладке "/recordings/{recording_id}". Вам необходимо просто вставить ссылку в поле url.
 <br>
 <br>
 <br>P.S. 
