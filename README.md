@@ -2,7 +2,7 @@
 <br>Вы можете загружать аудио файли в формате wav и сервис конвертирует их в mp3 фаил. Так же вы можете скачивать за 
 <br>Как пользоваться сервисом:
 <br>
-<br>1) Создать базу данных postgresql через docker: docker run -p 5432:5432 --name music -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=music -d postgres
+<br>1)В файле .env измените переменные для подключения к нужной базе данных.
 <br>
 <br>2) Запустить docker-compose build. После создание контейнера запустить docker-compose up.
 <br>
